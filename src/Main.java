@@ -65,6 +65,19 @@ public class Main {
         System.out.println("Tareas completadas: " + contador);
         System.out.println("Tareas pendientes: " + (listaTareas.size() - contador));
         System.out.println("Total de tareas: " + listaTareas.size());
+
+
+
+        // Eliminar tarea "Practicar Git"
+        String nombreABuscar = "Practicar Git";
+        for (int i = 0; i < listaTareas.size(); i++) {
+            if (listaTareas.get(i).nombre.equals(nombreABuscar)) {
+                listaTareas.remove(i);
+                System.out.println("🗑️ Eliminada: " + nombreABuscar);
+                break;
+            }
+        }
+
     }
 
     public static void agregarTareasEjemplo(ArrayList<Tarea> lista) {
